@@ -1,0 +1,17 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: business-service
+
+# 注册中心
+eureka:
+  client:
+    #register-with-eureka: false
+    #fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8001/eureka/
+    instance:
+      prefer-ip-address: true
+      instance-id: business-service:127.0.0.1:8003

@@ -1,0 +1,15 @@
+server:
+  port: 8001
+eureka:
+  server:
+    # 自我保护(缺省为true:开启)
+    enable-self-preservation: false
+    # 清理服务器
+    eviction-interval-timer-in-ms: 5000  # 清理间隔（单位毫秒，默认是60*1000）启用主动失效，并且每次主动失效检测间隔为3s
+  instance:
+    hostname: 127.0.0.1 #服务注册中心IP地址
+  client:
+    registerWithEureka: false #表示是否将自己注册在EurekaServer上，默认为true。由于当前应用就是EurekaServer，所以置为false
+    fetchRegistry: false #表示表示是否从EurekaServer获取注册信息，默认为true。单节点不需要同步其他的EurekaServer节点的数据
+    serviceUrl: #服务注册中心的配置内容，指定服务注册中心的位置
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
