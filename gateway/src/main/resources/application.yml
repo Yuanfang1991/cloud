@@ -4,24 +4,24 @@ server:
 spring:
   application:
     name: gateway-service
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          # 服务名小写
-          lower-case-service-id: true
-      routes:
-        - id: business-service
-          # lb代表从注册中心获取服务，且已负载均衡方式转发，loadbalance缩写
-          uri: lb://business-service
-          predicates:
-            - Path=/business/**
-          # 加上StripPrefix=1，否则转发到后端服务时会带上business前缀
-          filters:
-            # 进行token过滤
-            #- TokenAuthenticationFilter
-            - StripPrefix=1
+#  cloud:
+#    gateway:  #手动配置路由
+#      discovery:
+#        locator:
+#          enabled: true #默认为 false，开启通过服务中心的自动根据 serviceId 创建路由的功能。
+#          # 服务名小写
+#          lower-case-service-id: true
+#      routes:
+#        - id: business-service
+#          # lb代表从注册中心获取服务，且已负载均衡方式转发，loadbalance缩写
+#          uri: lb://business-service
+#          predicates:
+#            - Path=/business/**
+#          # 加上StripPrefix=1，否则转发到后端服务时会带上business前缀
+#          filters:
+#            # 进行token过滤
+#            #- TokenAuthenticationFilter
+#            - StripPrefix=1
 
 # 注册中心
 eureka:
