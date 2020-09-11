@@ -48,12 +48,6 @@
             <version>1.18.12</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-dependencies</artifactId>
-            <version>Finchley.SR2</version>
-        </dependency>
-
     </dependencies>
 
 </project>
