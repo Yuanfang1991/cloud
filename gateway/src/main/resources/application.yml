@@ -5,7 +5,7 @@ spring:
   application:
     name: gateway-service
 #  cloud:
-#    gateway:  #手动配置路由
+#    gateway:  #手动配置路由,查看路由信息：http://127.0.0.1:8002/actuator/gateway/routes
 #      discovery:
 #        locator:
 #          enabled: true #默认为 false，开启通过服务中心的自动根据 serviceId 创建路由的功能。

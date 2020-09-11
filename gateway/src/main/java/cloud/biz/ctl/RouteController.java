@@ -32,6 +32,8 @@ public class RouteController {
     @Autowired
     private DynamicRouteServiceImpl dynamicRouteService;
 
+    //TODO 动态路由未实现，版本问题
+
     //RouteDefinitionLocator是个接口，在org.springframework.cloud.gateway.route包下，如果想查看网关中所有的路由信息，调用此接口方法是一个办法，需要从先注入到容器
 
     /**
