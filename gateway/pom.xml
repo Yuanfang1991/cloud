@@ -13,7 +13,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>cloud02.bizcommon</groupId>
+            <groupId>cloud.bizcommon</groupId>
             <artifactId>common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

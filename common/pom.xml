@@ -3,13 +3,13 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>cloud02</artifactId>
+        <artifactId>cloud</artifactId>
         <groupId>org.example</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cloud02.bizcommon</groupId>
+    <groupId>cloud.bizcommon</groupId>
     <artifactId>common</artifactId>
 
     <dependencies>
@@ -46,6 +46,13 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
+        </dependency>
+
+        <!-- 使用Spring MVC构建Web（包括RESTful）应用程序，使用Tomcat作为默认的嵌入式容器 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.3.3.RELEASE</version>
         </dependency>
 
     </dependencies>
